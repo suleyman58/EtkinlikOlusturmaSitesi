@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "KayıtOlunanEtkinlikler";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+
+<body>
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th> EtkinlikId </th>
+            <th> EtkinlikAdi</th>
+            <th> EtkinlikTarihi</th>
+            <th> SonBasvuru</th>
+            <th> Aciklama</th>
+            <th> Sehir</th>
+            <th> Adres</th>
+            <th> Biletli</th>
+            <th> Kontenjan</th>
+            <th> Ucret</th>
+
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.EtkinlikId</td>
+                <td>@item.EtkinlikAdi</td>
+                <td>@item.EtkinlikTarihi</td>
+                <td>@item.SonBasvuru</td>
+                <td>@item.Aciklama</td>
+                <td>@item.Sehir</td>
+                <td>@item.Adres</td>
+                <td>@item.Biletli</td>
+                <td>@item.Kontenjan</td>
+                <td>@item.Ucret</td>
+
+                @*<td><button type="button" class="btn btn-danger" id="Sil">Sil</button> </td>*@
+
+ <td> <a href="/Kullanici/KatılmaIptal/@item.EtkinlikId" id="Sil" class="btn btn-danger"> KAYIT İPTALİ </a>   </td>
+
+            </tr>
+        }
+
+    </table>
+
+
+
+</body>
+

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "GecmisEtkinlikler";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+
+<body>
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th> EtkinlikId </th>
+            <th> EtkinlikAdi</th>
+            <th> EtkinlikTarihi</th>
+            <th> SonBasvuru</th>
+            <th> Aciklama</th>
+            <th> Sehir</th>
+            <th> Adres</th>
+            <th> Biletli</th>
+            <th> Ucret(TL)</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.EtkinlikId</td>
+                <td>@item.EtkinlikAdi</td>
+                <td>@item.EtkinlikTarihi</td>
+                <td>@item.SonBasvuru</td>
+                <td>@item.Aciklama</td>
+                <td>@item.Sehir</td>
+                <td>@item.Adres</td>
+                <td>@item.Biletli</td>
+                <td>@item.Ucret</td>
+
+            </tr>
+        }
+
+    </table>
+
+
+
+</body>
+

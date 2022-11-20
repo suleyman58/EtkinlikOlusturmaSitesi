@@ -1,0 +1,203 @@
+﻿@using ETKINLIK_SITESI.Models
+
+@model ETKINLIK_SITESI.ViewModels.katsehViewModel
+
+@{
+    ViewData["Title"] = "Duzenleme";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "bootstrap";
+}
+
+
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal3">
+    KATEGORİ EKLE
+</button>
+
+
+<div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="Modal3Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="Modal3Label">EKLEMEK İSTEDİĞİNİZ KATEGORİYİ YAZIN</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form asp-action="KategoriEkle" asp-controller="Admin" method="post">
+                    <label>Kategori Adı &emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;: </label>
+                    <input class="form-input" type="text" name="KategoriAd" />
+                    <br />
+                    <br />
+                    <button class="btn btn-success " name="kayıt3">Kategori Ekle </button>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vacgeç</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal1">
+    KATEGORİ SİL
+</button>
+
+<div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">KATEGORİ SİL </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" name="KategoriId" id="KategoriId">
+
+
+
+                <select class="form-select"   id="kategoriler" placeholder='Seçiniz..'>
+                      @foreach (var item in Model.Wkategori)
+                    {
+                        <option value=@item.KategoriId>@item.KategoriAd</option>
+                    }
+                </select>
+            
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="KategoriSil"  >Sil</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal4">
+    ŞEHİR EKLE
+</button>
+
+
+<div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="Modal4Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="Modal4Label">EKLEMEK İSTEDİĞİNİZ ŞEHİRİ VE PLAKASINI YAZIN</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form asp-action="SehirEkle" asp-controller="Admin" method="post">
+                    <label>Şehir Plakası &emsp;&emsp;&nbsp;: </label>
+                    <input type="text" name="Plaka" />
+                    <br />
+                    <br />
+                    <label>Şehir Adı &emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;: </label>
+                    <input type="text" name="Isim" />
+                    <br />
+                    <br />
+                    <button class="btn btn-success " name="kayıt4">Şehir Ekle </button>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal2">
+    ŞEHİR SİL
+</button>
+<div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="Modal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="Modal2Label"> ŞEHİR SİL</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th> Plaka </th>
+                        <th> Şehir adı</th>
+                    </tr>
+                    @foreach (var item2 in Model.Wsehir)
+                    {
+                        <tr>
+                            <td>@item2.Plaka </td>
+                            <td>@item2.Isim</td>
+
+                            <td> <a type="submit" value="Sil2" href="/Admin/SehirSil/@item2.Plaka" class="btn btn-danger" /> SİL </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+ @section Scripts {
+<script>
+
+    $(document).ready(function () {
+        $('#kategoriler').change((e) => {
+            $('#KategoriSil').click(() => {
+                var silinecekId = $('#deletedCategoy').val();
+                $.ajax({
+                    type: "POST",
+                    url: "/Admin/KategoriSil/" + e.target.value,
+                    contentType: "application/json",
+                    success: function (result) {
+                        console.log(result);
+                        let timerInterval
+                        Swal.fire({
+                            title: 'İşlem Başarılı !!',
+                            html: result.message,
+                            timer: 2000,
+                            timerProgressBar: true,
+                            didOpen: () => {
+                                Swal.showLoading()
+                                const b = Swal.getHtmlContainer().querySelector('b')
+                                timerInterval = setInterval(() => {
+                                    b.textContent = Swal.getTimerLeft()
+                                }, 100)
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        }).then((result) => {
+                            /* Read more about handling dismissals below */
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                               
+                            }
+                        });
+                        setTimeout(() => {
+                            $('#Modal1').modal('hide');
+
+                        }, 1250)
+
+                        },
+                        error: function (result, status) {
+                            console.log(result);
+                        }
+
+                });
+            });
+        });
+
+
+    });
+</script>
+}
+

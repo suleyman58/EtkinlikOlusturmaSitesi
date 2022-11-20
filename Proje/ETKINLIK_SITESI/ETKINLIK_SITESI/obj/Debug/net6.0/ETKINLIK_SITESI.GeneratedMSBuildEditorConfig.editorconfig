@@ -1,0 +1,152 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ETKINLIK_SITESI
+build_property.RootNamespace = ETKINLIK_SITESI
+build_property.ProjectDir = C:\Users\Süleyman\source\repos\ETKINLIK_SITESI\ETKINLIK_SITESI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Süleyman\source\repos\ETKINLIK_SITESI\ETKINLIK_SITESI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Admin/Duzenleme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRHV6ZW5sZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Admin/EtkinlikTalep.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRXRraW5saWtUYWxlcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Firma/Firetkinliklerim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFcRmlyZXRraW5saWtsZXJpbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Firma/FirFirmaKayit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFcRmlyRmlybWFLYXlpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Firma/FirGiris.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFcRmlyR2lyaXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Firma/FirIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFcRmlySW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Firma/Firprofil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFcRmlycHJvZmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/Bildirimler.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEJpbGRpcmltbGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/EtkinlikDuzenle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEV0a2lubGlrRHV6ZW5sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/EtkinlikKayıt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEV0a2lubGlrS2F5xLF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/etkinliklerim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXGV0a2lubGlrbGVyaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/EtkinlikOlustur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEV0a2lubGlrT2x1c3R1ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/GecmisEtkinlikler.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEdlY21pc0V0a2lubGlrbGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/KayıtOlunanEtkinlikler.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEthecSxdE9sdW5hbkV0a2lubGlrbGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/profil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXHByb2ZpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Kullanici/UyeDuzenle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXFV5ZUR1emVubGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Shared/_FirmaLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GaXJtYUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Shared/_KullaniciLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9LdWxsYW5pY2lMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Shared/_VarsayilanLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYXJzYXlpbGFuTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Varsayilan/FirmaKayıt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFyc2F5aWxhblxGaXJtYUthecSxdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Varsayilan/Giris.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFyc2F5aWxhblxHaXJpcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Varsayilan/Hakkimizda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFyc2F5aWxhblxIYWtraW1pemRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Varsayilan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFyc2F5aWxhblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Varsayilan/Uyeol.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFyc2F5aWxhblxVeWVvbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Süleyman/source/repos/ETKINLIK_SITESI/ETKINLIK_SITESI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-vi9akhrvig

@@ -1,0 +1,63 @@
+﻿@using ETKINLIK_SITESI.Models
+@{
+    ViewData["Title"] = "ekinliklerim";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+    @if (TempData["AlertMessage"] != null)
+    {
+    <div class="alert alert-info">
+        <strong>@TempData["AlertMessage"]</strong>
+        </div>
+    }
+
+<br />
+<td> <a href="/Kullanici/GecmisEtkinlikler/" class="btn btn-info"> Tarihi Geçmiş Etkinlikler </a>   </td>
+&emsp; 
+
+<td> <a href="/Kullanici/KayıtOlunanEtkinlikler/" class="btn btn-info"> Katılacağım Etkinlikler </a>   </td>
+
+<br />
+<br />
+<body>
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th> EtkinlikId </th>
+            <th> EtkinlikAdi</th>
+            <th> EtkinlikTarihi</th>
+            <th> SonBasvuru</th>
+            <th> Aciklama</th>
+            <th> Sehir</th>
+            <th> Adres</th>
+            <th> Biletli</th>
+            <th> Kontenjan</th>
+            <th> Ucret(TL)</th>
+            <th> İşlemler </th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.EtkinlikId</td>
+                <td>@item.EtkinlikAdi</td>
+                <td>@item.EtkinlikTarihi</td>
+                <td>@item.SonBasvuru</td>
+                <td>@item.Aciklama</td>
+                <td>@item.Sehir</td>
+                <td>@item.Adres</td>
+                <td>@item.Biletli</td>
+                <td>@item.Kontenjan</td>
+                <td>@item.Ucret</td>
+                <td> <a href="/Kullanici/EtkinlikDuzenle/@item.EtkinlikId" class="btn btn-info"> Düzenle </a>   </td>
+                <td> <a href="/Kullanici/EtkinlikSil/@item.EtkinlikId" class="btn btn-danger"> Sil </a>   </td>
+
+
+            </tr>
+        }
+
+    </table>
+    </body>
+

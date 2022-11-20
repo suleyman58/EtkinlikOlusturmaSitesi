@@ -1,0 +1,147 @@
+﻿@model Etkinlikler
+@using ETKINLIK_SITESI.Models
+
+
+@{
+    ViewData["Title"] = "EtkinlikOlustur";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+
+<header>
+    <div align="center">
+        <p>
+            <font face="tahoma" size="5" color="maroon">
+                <b>ETKİNLİK OLUŞTURMA SAYFASINA HOŞGELDİN</b>
+                <br />
+            </font>
+        </p>
+    </div>
+</header>
+
+<form asp-action="EtkinlikOlustur" asp-controller="Kullanici" method="post">
+    <div class="col-md-4">
+        <div>
+            <div class="form-group">
+                <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+                <label> Kategori Seçin</label>
+                <select id="KategoriId" name="KategoriId" class="form-control" asp-items="@(new SelectList(ViewBag.ktgr,"Value","Text"))">
+                </select>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <label>Etkinlik Tarihi  </label>
+                <input asp-for="EtkinlikTarihi" class="form-control" />
+                <span asp-validation-for="EtkinlikTarihi" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <label>Etkinlik Son Başvuru Tarihi  </label>
+                <input asp-for="SonBasvuru" class="form-control" />
+                <span asp-validation-for="SonBasvuru" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <div class="alert-danger"></div>
+                <label> Şehir Seçin</label>
+                <select id="Plaka" name="Plaka" class="form-control" asp-items="@(new SelectList(ViewBag.shrl,"Value","Text"))">
+                </select>
+            </div>
+
+            <br />
+            <div class="form-group">
+                <label>Adres </label>
+                <input asp-for="Adres" class="form-control" />
+                <span asp-validation-for="Adres" class="text-danger"></span>
+            </div>
+
+            <br />
+            <div class="form-group">
+                <label>Kontenjan</label>
+                <input asp-for="Kontenjan" class="form-control"  />
+                <span asp-validation-for="Kontenjan" class="text-danger"></span>
+            </div>
+
+            <br />
+            <div class="form-group">
+                <label>Ucret</label>
+                <input asp-for="Ucret" class="form-control"  />
+                <span asp-validation-for="Ucret" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <label>Biletli</label>
+                <select id="Biletli" name="Biletli" class="form-control">
+                    <option value="1">Evet</option>
+                    <option value="0">Hayır</option>
+                </select>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <label>Açıklama </label>
+                <textarea asp-for="Aciklama" class="form-control" rows="5" cols="55" wrap="soft"> </textarea>
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <button type="button" class="btn btn-success " id="kayıt1" name="kayıt1">Oluştur</button>
+
+        </div>
+    </div>
+</form>
+@*
+
+@if (ViewBag.Message != null)
+{
+    <script>
+        $(function () {
+            alert("@ViewBag.Message")
+        });
+    </script>
+}*@
+
+@section Scripts {
+
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+
+        $(document).ready(function () {
+            $('#kayıt1').click(() => {
+                var obj = {
+                    EtkinlikAdi: $("#KategoriId").val(),
+                    EtkinlikTarihi: $("#EtkinlikTarihi").val(),
+                    SonBasvuru: $("#SonBasvuru").val(),
+                    Aciklama: $("#Aciklama").val(),
+                    sehir: $("#Plaka").val(),
+                    Adres: $("#Adres").val(),
+                    Kontenjan: parseInt($("#Kontenjan").val()),
+                    Ucret: parseInt($("#Ucret").val()),
+                    Biletli: $("#Biletli").val() == "1" ? true : false,
+                };
+                $.ajax({
+                    url: '@Url.Action("EtkinlikOlustur", "Kullanici")',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: obj,
+                    success: function (data) {
+                        alert("sss");
+                    }
+
+                });
+            });
+
+
+        });
+    </script>
+}

@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Giris";
+    Layout = "~/Views/Shared/_VarsayilanLayout.cshtml";
+}
+19
+<header>
+    <div align="justify">
+        <p>
+            <font face="tahoma" size="5" color="maroon">
+                <b>GİRİŞ SAYFASINA HOŞGELDİN</b>
+                <br />
+
+            </font>
+        </p>
+    </div>
+    <br />
+
+</header>
+<body>
+   
+        <form method="post">
+
+
+
+            <div class="from-group">
+                <label>Email adresi </label>
+                <br />
+
+                <input type="email" id="Mail" name="Mail" />
+            </div>
+            <br />
+            <div class="from-group">
+                <label>    Şifre </label>
+                <br />
+                <input type="password" id="Sifre" name="Sifre" />
+            </div>
+            <br />
+            <button class="btn btn-primary">GİRİŞ YAP</button>
+
+            &nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+
+
+        </form>
+    <div class="from-group">
+        <label>Firma girişi için buraya tıklayın ===> </label>
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+        <a href="/Firma/FirGiris/" class="btn btn-secondary">FİRMA GİRİŞİ </a>
+    </div>
+    <br />
+    <br />
+        <div class="from-group">
+        <label>Üye değilseniz buradan üye olabilirsiniz ===> </label>
+        &emsp;
+        <a href="/Varsayilan/Uyeol/" class="btn btn-danger"> ÜYE OL  </a>
+        </div>
+        <br />
+        <br />
+
+        <div class="from-group">
+        <label>Bilet firmaları için üye ekranı ===> </label>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+            <a href="/Varsayilan/FirmaKayıt/" class="btn btn-danger"> ÜYE OL (FİRMA) </a>
+        </div>
+   
+</body>
+

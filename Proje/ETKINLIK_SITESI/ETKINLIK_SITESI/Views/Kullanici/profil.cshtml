@@ -1,0 +1,44 @@
+﻿@using ETKINLIK_SITESI.Models
+@{
+    ViewData["Title"] = "profil";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-info">
+        <strong>@TempData["AlertMessage"]</strong>
+    </div>
+}
+<br />
+<br />
+
+<a href="/Kullanici/Bildirimler/" style='float:right;' class="btn btn-info"> BİLDİRİMLERİM </a> 
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th> Id </th>
+        <th> Ad </th>
+        <th> Soyad</th>
+        <th> Mail</th>
+        <th> Profil Bilgileri Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.UyeId</td>
+            <td>@item.UyeAdi</td>
+            <td>@item.UyeSoyAdi</td>
+            <td>@item.Mail</td>
+            <td> <a href="/Kullanici/UyeDuzenle/@item.UyeId" class="btn btn-success"> Güncelle </a>   </td>
+        </tr>
+    }
+
+</table>
+    
+
+
+
+

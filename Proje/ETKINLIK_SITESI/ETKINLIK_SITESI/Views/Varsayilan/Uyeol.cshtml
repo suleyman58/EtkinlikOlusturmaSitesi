@@ -1,0 +1,91 @@
+﻿@model Uyeler
+
+@{
+    ViewData["Title"] = "Üyeol";
+    Layout = "~/Views/Shared/_VarsayilanLayout.cshtml";
+}
+
+
+<header>
+    <div align="center">
+        <p>
+            <font face="tahoma" size="5" color="maroon">
+                <b>ÜYE KAYIT SAYFASINA HOŞGELDİN</b>
+                <br />
+
+            </font>
+        </p>
+    </div>
+
+</header>
+<form asp-action="Uyeol" asp-controller="Varsayilan" method="post">
+    <div class="row">
+        <div class="col-md-4">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>Adınız  </label>
+                <input asp-for="UyeAdi" class="form-control" />
+                <span asp-validation-for="UyeAdi" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label>Soyadınız: </label>
+                <input asp-for="UyeSoyAdi" class="form-control" />
+                <span asp-validation-for="UyeSoyAdi" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label>Mail </label>
+                <input asp-for="Mail" class="form-control" />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label>Şifre</label>
+                <input asp-for="Sifre" class="form-control" type="text" />
+                <span asp-validation-for="Sifre" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label>Şifre Tekrar</label>
+                <input asp-for="SifreTekrar" class="form-control" type="text" />
+                <span asp-validation-for="SifreTekrar" class="text-danger"></span>
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+
+                <button id="kayıt1" name=" kayıt1" class="btn btn-primary"> Kayıt Ol </button>
+
+            </div>
+
+        </div>
+    </div>
+</form>
+
+
+
+@section Scripts
+   {
+
+            @if (ViewBag.Message != null)
+            {
+                <script >
+                    $(function () {
+                        alert("@ViewBag.Message")
+                    });
+                </script>
+            }
+
+
+    
+
+            @{
+                await Html.RenderPartialAsync("_ValidationScriptsPartial");
+            }
+  }
+
+
+
+

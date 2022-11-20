@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_FirmaLayout.cshtml";
+}
+
+
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-info">
+        <strong>@TempData["AlertMessage"]</strong>
+    </div>
+}
+
+<body>
+
+
+        <table class="table table-bordered">
+            <tr>
+                <th> EtkinlikId </th>
+                <th> EtkinlikAdi</th>
+                <th> EtkinlikTarihi</th>
+                <th> SonBasvuru</th>
+                <th> Aciklama</th>
+                <th> Sehir</th>
+                <th> Adres</th>
+                <th> Biletli</th>
+                <th> Kontenjan</th>
+                <th> Talep oluştur</th>
+
+
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.EtkinlikId</td>
+                    <td>@item.EtkinlikAdi</td>
+                    <td>@item.EtkinlikTarihi</td>
+                    <td>@item.SonBasvuru</td>
+                    <td>@item.Aciklama</td>
+                    <td>@item.Sehir</td>
+                    <td>@item.Adres</td>
+                    <td>@item.Biletli</td>
+                    <td>@item.Kontenjan</td>
+
+
+
+
+
+                    <td> <a href="/Firma/FirFirmaKayit/@item.EtkinlikId" class="btn btn-success" title="Kayıt olmak için tıklayın"> KAYIT </a>   </td>
+
+                </tr>
+            }
+
+        </table>
+
+
+
+</body>
+

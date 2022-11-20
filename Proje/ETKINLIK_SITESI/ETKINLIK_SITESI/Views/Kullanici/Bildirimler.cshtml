@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Bildirimler";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+<h1>Bildirimler</h1>
+
+<br />
+<br />
+
+<body>
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th> EtkinlikId </th>
+            <th> Etkinliğe dair bildirim </th>
+           
+
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.EtkinlikId</td>
+                <td>@item.Bildirim</td>
+                
+
+               
+
+            </tr>
+        }
+
+    </table>
+
+
+
+</body>
+

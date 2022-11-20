@@ -1,0 +1,195 @@
+﻿@model ETKINLIK_SITESI.ViewModels.EtFirViewModel
+@{
+    ViewData["Title"] = "EtkinlikKayıt";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+
+<header>
+    <div align="center">
+        <p>
+            <font face="tahoma" size="5" color="red">
+                <b>BİR ETKİNLİĞE KATILMAK ÜZERESİNİZ</b>
+                <br />
+
+            </font>
+        </p>
+    </div>
+
+</header>
+<body>
+    <h4>
+        Kayıt olacağınız etkinlik bilgileri aşağıdadır
+
+    </h4>
+
+
+    <div class="modal fade" id="biletliTrueModal" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">KATEGORİ SİL </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body" name="FirmaId" id="FirmaId">
+
+                    <table class="table table-bordered">
+                        <tr>
+                            <th> FirmaAdı</th>
+                            <th> WebSite </th>
+                        </tr>
+                        @if (Model != null)
+                        {
+
+                            foreach (var item in Model.Wfirma)
+                            {
+                                <tr>
+
+                                    <td>@item.FirmaAdı</td>
+                                    <td>@item.WebSite</td>
+
+                                    <td> <a href="/Kullanici/EtkinlikKayıt/" class="btn btn-success"> SİTEYE GİT </a>   </td>
+
+                                </tr>
+                            }
+                        }
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <form asp-action="EtkinlikKayıt" asp-controller="Kullanici" method="post">
+        <table class="table table-bordered">
+            <tr>
+                <th> EtkinlikId </th>
+                <th> EtkinlikAdi</th>
+                <th> EtkinlikTarihi</th>
+                <th> SonBasvuru</th>
+                <th> Aciklama</th>
+                <th> Sehir</th>
+                <th> Adres</th>
+                <th> Biletli</th>
+                <th> Kontenjan</th>
+                <th> Ucret(TL)</th>
+                <th> </th>
+                <th> </th>
+
+
+            </tr>
+            @if (Model != null)
+            {
+                @foreach (var item in Model.Wetkinlik)
+                {
+                    <tr>
+
+                        <td>@item.EtkinlikId</td>
+                        <td>@item.EtkinlikAdi</td>
+                        <td>@item.EtkinlikTarihi</td>
+                        <td>@item.SonBasvuru</td>
+                        <td>@item.Aciklama</td>
+                        <td>@item.Sehir</td>
+                        <td>@item.Adres</td>
+                        <td>@item.Biletli</td>
+                        <td>@item.Kontenjan</td>
+                        <td>@item.Ucret</td>
+                        <td> <button type="button" id="etkinlikKayit" name="etkinlikKayit" class="btn btn-primary" onclick="handleSave(@(item.Biletli==true?1:0))">Kayıt</button></td>
+                       
+                        <td> <a href="/Kullanici/Index/" class="btn btn-danger" title="Anasayfaya dönmek için tıklayın"> Vazgeç </a>   </td>
+
+                    </tr>
+                }
+            }
+
+
+        </table>
+
+
+    </form>
+
+
+
+
+
+
+
+
+    @*
+    @if (ViewBag.Message != null)
+    {
+
+        <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@ViewBag.message");
+            };
+
+        </script>
+    }
+    else
+    {
+        <script type="text/javascript">
+
+            window.onload = function () {
+                alert("yanlış");
+            };
+
+        </script>
+    }*@
+    @section Scripts {
+        <script>
+            function handleSave(flag) {
+                if (flag == 1) {
+                    //1. adım modal açılcak
+                    //alert("1. adım true");
+                    $('#biletliTrueModal').modal('show');
+                } else {
+                    //2. adım burda
+                    //alert("2. adım false")
+                    var obj = {
+
+
+                        Biletli: $("#Biletli").val() == "1" ? true : false,
+                    };
+                    $.ajax({
+                        url: '@Url.Action("EtkinlikKayıt", "Kullanici")',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: obj,
+                        success: function (data) {
+                            alert(data);
+                        }
+
+                    });
+                }
+                //$.ajax({
+                //  url: '@Url./*Action("EtkinlikKayıt", "Kullanici")',*/
+                //  type: 'POST',
+                //  dataType: 'json',
+                //  data: obj,
+                //  success: function (data) {
+                //      alert(data);
+                //  }
+
+                //  });
+            };
+
+
+
+        </script>
+       
+       
+    }
+
+   
+
+    </body>
+

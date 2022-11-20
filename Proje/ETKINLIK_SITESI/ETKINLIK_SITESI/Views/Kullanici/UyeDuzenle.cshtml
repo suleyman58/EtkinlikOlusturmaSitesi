@@ -1,0 +1,54 @@
+﻿@model ETKINLIK_SITESI.Uyeler
+
+@{
+    ViewData["Title"] = "Duzenle";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+<h4>Profil Güncelleme</h4>
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UyeDuzenle" method="post">
+            <div class="form-group">
+                <label asp-for="UyeAdi" class="control-label"></label>
+                <input asp-for="UyeAdi" class="form-control" />
+                <span asp-validation-for="UyeAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UyeSoyAdi" class="control-label"></label>
+                <input asp-for="UyeSoyAdi" class="form-control" />
+                <span asp-validation-for="UyeSoyAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mail" class="control-label"></label>
+                <input asp-for="Mail" class="form-control" readonly />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sifre" class="control-label"></label>
+                <input asp-for="Sifre" class="form-control" />
+                <span asp-validation-for="Sifre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SifreTekrar" class="control-label"></label>
+                <input asp-for="SifreTekrar" class="form-control" />
+                <span asp-validation-for="SifreTekrar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" >
+                    Güncelle
+                </button> 
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Profil" asp-controller="Kullanici" class="btn btn-link">Profile Geri Dön </a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

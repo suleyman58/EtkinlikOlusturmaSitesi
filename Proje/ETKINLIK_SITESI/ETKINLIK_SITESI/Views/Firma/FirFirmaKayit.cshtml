@@ -1,0 +1,51 @@
+﻿@model ETKINLIK_SITESI.Etkinlikler
+@{
+    ViewData["Title"] = "FirFirmaKayit";
+    Layout = "~/Views/Shared/_FirmaLayout.cshtml";
+}
+
+<body>
+    <form asp-action="FirFirmaKayit" asp-controller="Firma" method="post">
+
+        <table class="table table-bordered">
+            <tr>
+                <th> EtkinlikId </th>
+                <th> EtkinlikAdi</th>
+                <th> EtkinlikTarihi</th>
+                <th> SonBasvuru</th>
+                <th> Aciklama</th>
+                <th> Sehir</th>
+                <th> Adres</th>
+                <th> Biletli</th>
+                <th> Kontenjan</th>
+                <th> Talep oluştur</th>
+
+
+            </tr>
+
+            <tr>
+
+                <td>@Model.EtkinlikId</td>
+                <td>@Model.EtkinlikAdi</td>
+                <td>@Model.EtkinlikTarihi</td>
+                <td>@Model.SonBasvuru</td>
+                <td>@Model.Aciklama</td>
+                <td>@Model.Sehir</td>
+                <td>@Model.Adres</td>
+                <td>@Model.Biletli</td>
+                <td>@Model.Kontenjan</td>
+
+
+                
+                <td> <button class="btn btn-success" type="submit"> Kayıt ol </button>  </td>
+
+              
+
+            </tr>
+
+
+        </table>
+
+
+    </form>
+</body>

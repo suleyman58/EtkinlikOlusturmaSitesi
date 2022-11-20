@@ -1,0 +1,68 @@
+﻿@using ETKINLIK_SITESI.Models
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<body>
+
+
+    <table align="left" class="table table-bordered">
+        <tr>
+
+            <th>EtkinlikId </th>
+            <th>EtkinlikAdi </th>
+            <th>EtkinlikTarihi</th>
+            <th>SonBasvuru </th>
+            <th>Aciklama </th>
+            <th>Onay </th>
+            <th>Sehir</th>
+            <th>Adres</th>
+            <th>Kontenjan</th>
+            <th>Biletli</th>
+            <th>OluşturanId</th>
+            <th>Ucret(TL)</th>
+            <th>Onay</th>
+            <th>Onay</th>
+
+
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+
+                <td>@item.EtkinlikId </td>
+                <td>@item.EtkinlikAdi </td>
+                <td>@item.EtkinlikTarihi</td>
+                <td>@item.SonBasvuru </td>
+                <td>@item.Aciklama </td>
+                <td>@item.Onay </td>
+                <td>@item.Sehir</td>
+                <td>@item.Adres</td>
+                <td>@item.Kontenjan</td>
+                <td>@item.Biletli</td>
+                <td>@item.OluşturanId</td>
+                <td>@item.Ucret</td>
+
+                <td> <a type="submit" value="red" href="/Admin/EtkinlikOnay/@item.EtkinlikId" class="btn btn-success" /> ONAY </td>
+                <td> <a type="submit" value="kabul" href="/Admin/EtkinlikSil/@item.EtkinlikId" class="btn btn-danger"  /> SİL </td>
+                
+
+
+
+
+
+
+            </tr>
+        }
+
+    </table>
+
+
+
+</body>
